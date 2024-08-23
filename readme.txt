@@ -1,65 +1,53 @@
-TutoringContract
+# TutoringContract
 
-A Solidity contract for a tokenized peer tutoring platform.
-Overview
+## Vision
+The **TutoringContract** is designed to facilitate a decentralized platform where tutors and tutees can securely and transparently engage in tutoring sessions. By utilizing blockchain technology, this contract ensures fair compensation for tutors and a streamlined process for managing tutoring sessions.
 
-This contract allows tutors and tutees to register and engage in tutoring sessions. Tutors are rewarded with tokens for their services, which can be withdrawn at a later time.
-Functions
-registerTutor(address _tutor)
+## Flowchart
 
-Registers a new tutor on the platform.
+1. **Tutor and Tutee Registration:**
+   - Tutors and tutees register by calling `registerTutor` and `registerTutee`, respectively.
+   - Initial balances are set to zero for both tutors and tutees.
 
-    _tutor: The address of the tutor to register.
+2. **Requesting a Tutoring Session:**
+   - A tutee requests a session with a specific tutor using `requestTutoring`.
+   - The contract checks if both parties have sufficient tokens.
 
-registerTutee(address _tutee)
+3. **Tutoring Session Execution:**
+   - The session is conducted, and `tutoringSession` is called internally.
+   - Tokens are transferred from the tutee to the tutor upon completion.
 
-Registers a new tutee on the platform.
+4. **Withdraw Tokens:**
+   - Tutors can withdraw their earned tokens by calling `withdrawTokens`, transferring them to their personal wallet.
 
-    _tutee: The address of the tutee to register.
+## Contract Address
+This smart contract is deployed on the Educhain . The specific contract address is: 
 
-requestTutoring(address _tutee, address _tutor)
+`0x064084dd0c54709DAc76e47b259dE7d33b29B7c7`
 
-Requests a tutoring session between a tutee and a tutor.
+## Future Scope
 
-    _tutee: The address of the tutee requesting the session.
-    _tutor: The address of the tutor providing the session.
+1. **Advanced Tokenomics:**
+   - Introduce dynamic token rewards based on session duration and tutor performance.
+   - Explore staking and liquidity mining for tutors.
 
-tutoringSession(address _tutee, address _tutor)
+2. **Enhanced Matching Algorithms:**
+   - Develop AI-based matching algorithms to pair tutees with the most suitable tutors.
 
-Internal function that updates the tutoring session records and rewards the tutor with tokens.
+3. **Reputation and Feedback System:**
+   - Implement a reputation system where both tutors and tutees can rate each other to build trust within the community.
 
-    _tutee: The address of the tutee participating in the session.
-    _tutor: The address of the tutor participating in the session.
+4. **Multi-Platform Integration:**
+   - Integrate with existing educational platforms to enable seamless scheduling and management of sessions.
 
-withdrawTokens(address _address, uint _amount)
+5. **Global Expansion:**
+   - Expand the platform to support multiple languages and cross-border payments, fostering a global tutoring ecosystem.
 
-Withdraws tokens from a tutor's balance.
+## Contact Details
+For inquiries or further information, please contact:
+- **Name:** Sarungbam Alen Meetei
+- **Email:** alen20780@gmail.com
+- **LinkedIn:** www.linkedin.com/in/sarungbam-meetei-ba9a1b216
+- **Github:** https://github.com/alen20780
 
-    _address: The address of the tutor withdrawing tokens.
-    _amount: The amount of tokens to withdraw.
-
-Variables
-
-    owner: The address of the contract owner.
-    tutorBalances: A mapping of tutor addresses to their token balances.
-    tuteeBalances: A mapping of tutee addresses to their token balances.
-    tokenReward: The amount of tokens rewarded to tutors for each session.
-    tutoringDuration: The duration of each tutoring session (not implemented).
-
-Installation
-
-To deploy this contract, you will need to:
-
-    Install the Solidity compiler (solc) and a Ethereum development environment (such as Truffle or Remix).
-    Compile the contract using solc.
-    Deploy the contract to a Ethereum network (such as the mainnet or a testnet).
-
-License
-
-This contract is licensed under the MIT License.
-Contributing
-
-Contributions are welcome! Please submit a pull request with your changes and a brief description of what you've added or fixed.
-Security
-
-This contract has not been audited for security vulnerabilities. Use at your own risk.
+---
