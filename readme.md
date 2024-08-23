@@ -1,5 +1,8 @@
 # TutoringContract
 
+![image](https://github.com/user-attachments/assets/29083c5e-e09d-4137-8d0d-5534099c7bfa)
+
+
 ## Vision
 The **TutoringContract** is designed to facilitate a decentralized platform where tutors and tutees can securely and transparently engage in tutoring sessions. By utilizing blockchain technology, this contract ensures fair compensation for tutors and a streamlined process for managing tutoring sessions.
 
@@ -24,6 +27,9 @@ The **TutoringContract** is designed to facilitate a decentralized platform wher
 This smart contract is deployed on the Educhain . The specific contract address is: 
 
 `0x064084dd0c54709DAc76e47b259dE7d33b29B7c7`
+
+![WhatsApp Image 2024-08-23 at 17 23 44_81206b03](https://github.com/user-attachments/assets/4b9842c6-ed06-4c0f-bae0-dfe45be7f20e)
+
 
 ## Future Scope
 
